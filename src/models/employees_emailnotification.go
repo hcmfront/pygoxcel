@@ -22,7 +22,7 @@ type Employees_emailnotification struct {
 
 func Get(ID string) (Employees_emailnotification, bool) {
 	db := db.GetConnection()
-	row := db.QueryRow("SELECT * FROM employees_emailnotification_2 WHERE id = $1", ID)
+	row := db.QueryRow("SELECT * FROM employees_emailnotification WHERE id = $1", ID)
 
 	var id int
 	var task_id string
@@ -65,7 +65,7 @@ func Get(ID string) (Employees_emailnotification, bool) {
 
 func GetAll() []Employees_emailnotification {
 	db := db.GetConnection()
-	rows, err := db.Query("SELECT * FROM employees_emailnotification_2 ORDER BY id")
+	rows, err := db.Query("SELECT * FROM employees_emailnotification ORDER BY id")
 	if err != nil {
 		log.Fatal(err)
 	}
