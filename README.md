@@ -5,7 +5,7 @@ La API esta integramente desarrollada en GO lang, utiliza una base de postgres p
 
 Para realizar una prueba se debe:
 
-1 configurar el acceso a la BD de postgres utilizando el archivo .env
+1 configurar el acceso a la BD de postgres utilizando el archivo .env /p
 2 modificar las estructuras de la tabla a utilizar en el archivo "employees_emailnotification.go" del directorio models. O crear el propio.
 3 la ejecucion es  "go run src/main.go". Esto genera una salida por consola con "Server running at port 8080"
 4 la consulta se realiza a traves de postman u otra herramienta, haciendo:
